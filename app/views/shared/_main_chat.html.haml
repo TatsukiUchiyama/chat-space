@@ -1,0 +1,34 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info__left
+      .chat-main__group-info__left--group-name
+        test
+      .chat-main__group-info__left--menbers-list
+        menber: hiroshi
+    .chat-main__group-info__right
+      = link_to "#", class: "chat-main__group-info__right--text" do
+        Exit
+  .chat-main__message-list
+    .chat-main__message-list__user-area
+      .chat-main__message-list__user-area--name
+        おはよう
+      .chat-main__message-list__user-area--date
+        2020/01/01
+    .chat-main__message-list__message-area
+      .chat-main__message-list__message-area--text
+        本日もご安全に！
+    .chat-main__message-list__user-area
+      .chat-main__message-list__user-area--name
+        お疲れ様でした
+      .chat-main__message-list__user-area--date
+        2020/01/01
+    .chat-main__message-list__message-area
+      .chat-main__message-list__message-area--text
+        整理整頓清掃清潔
+  .chat-main__message-form
+    .chat-main__message-form__box
+      %input{:type => :text, :placeholder => "type a message", :class => "chat-main__message-form__box__text"}
+      %label
+        = icon('fas', 'image', class: "chat-main__message-form__box--image-btn")
+        %input{:type => :file, :class => "hiddon"}
+    %input{:type => :submit, :value => "Send", :class => "chat-main__message-form--send-btn"}
