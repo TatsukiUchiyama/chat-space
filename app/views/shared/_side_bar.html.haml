@@ -2,12 +2,14 @@
   .side-ber__user-name
     .side-ber__user-name__box
       .side-ber__user-name__box--text
-        name
+        = current_user.nickname
       .side-ber__user-name__box--icon-area
         = link_to "#", class: "side-ber__user-name__box--icon-area--icon" do
           = icon('fas', 'edit')
-        = link_to "#", class: "side-ber__user-name__box--icon-area--icon" do
+        = link_to edit_user_path(current_user), class: "side-ber__user-name__box--icon-area--icon" do
           = icon('fas', 'cog')
+
+
   .side-ber__group-list
     .side-ber__group-list__box
       .side-ber__group-list__box__group-name

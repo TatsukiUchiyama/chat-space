@@ -123,8 +123,8 @@ $textGray: #999999;
       padding: 0 40px;
       height: 90px;
       background-color: #d2d2d2;
-        display: flex;
-        align-items: center;
+      display: flex;
+      align-items: center;
       &__box{
         height: 50px;
         width: 100%;
@@ -135,7 +135,7 @@ $textGray: #999999;
           background-color: $bgWhite;
           color: $textGray;
           line-height: 50px;
-          padding-left: 10px;
+          padding: 0 40px 0 10px;
           font-size: 16px;
         }  
         &--image-btn{
