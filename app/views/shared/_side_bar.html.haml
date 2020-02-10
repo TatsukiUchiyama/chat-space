@@ -11,8 +11,8 @@
   .side-ber__group-list
     - current_user.groups.each do |group|
       .side-ber__group-list__box
-        = link_to '#', class: "none" do
+        = link_to group_messages_path(group.id), class: "none" do
           .side-ber__group-list__box__group-name
             = group.name
           .side-ber__group-list__box__new-message
-            メッセージはまだありません
+            = group.show_last_message

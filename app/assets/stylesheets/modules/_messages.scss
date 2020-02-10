@@ -73,10 +73,17 @@ $textGray: #999999;
           padding: 35px 0 15px;
           color: #333333;
           font-size: 20px;
+          display: flex;
         }
         &--menbers-list{
           color: #999999;
           font-size: 12px;
+          display: flex;
+          &--name{
+            color: #999999;
+            font-size: 12px;
+            padding: 0 5px;
+          }
         }
       }
       &__right{
@@ -106,6 +113,7 @@ $textGray: #999999;
           color: #333333;
         }
         &--date{
+          padding-left: 10px;
           font-size: 12px;
           color: $textGray;
         }
@@ -132,11 +140,13 @@ $textGray: #999999;
           height: 50px;
           width: 100%;
           background-color: $bgWhite;
-          color: $textGray;
           line-height: 50px;
           padding: 0 40px 0 10px;
           font-size: 16px;
-        }  
+        }
+        &--text placeholder{
+          color: $textGray;
+        }
         &--image-btn{
           position: absolute;
           top: 15px;
