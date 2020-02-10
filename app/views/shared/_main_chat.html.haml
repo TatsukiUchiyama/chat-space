@@ -2,47 +2,24 @@
   .chat-main__group-info
     .chat-main__group-info__left
       .chat-main__group-info__left--group-name
-        test
+        = @group.name
       .chat-main__group-info__left--menbers-list
-        menber: hiroshi
+        menber: 
+        - @group.users.each do |user|
+          .chat-main__group-info__left--menbers-list--name
+            = user.nickname
     .chat-main__group-info__right
-      = link_to "#", class: "chat-main__group-info__right--text" do
+      = link_to edit_group_path(@group.id), class: "chat-main__group-info__right--text" do
         Exit
+
   .chat-main__message-list
-    .chat-main__message-list__user-area
-      .chat-main__message-list__user-area--name
-        おはよう
-      .chat-main__message-list__user-area--date
-        2020/01/01
-    .chat-main__message-list__message-area
-      .chat-main__message-list__message-area--text
-        本日もご安全に！
-    .chat-main__message-list__user-area
-      .chat-main__message-list__user-area--name
-        お疲れ様でした
-      .chat-main__message-list__user-area--date
-        2020/01/01
-    .chat-main__message-list__message-area
-      .chat-main__message-list__message-area--text
-        整理整頓清掃清潔
-  .chat-main__message-form
-    .chat-main__message-form__box
-      -# = form_for @message do |f|
-      -#   = f.text.field 
-      -#   = f.label
-      -#     = icon('fas', 'image', class: "chat-main__message-form__box--image-btn")
-      -#     %input{type: :file, class: :"hiddon"}
-      -#   = form.submit, valeu: :"Send", class: :"chat-main__message-form--send-btn"
+    = render @messages
 
--# <%= form_for @fruit do |form| %>
--# <%= form.label :name %> <%= form.text_field :name, id: :fruit_name %>
--# <%= form.label :description %> <%= form.text_area :description, id: :fruit_description %>
--# <%= form.submit %>
--# <% end %>
-
-
-    -#   %input{:type => :text, :placeholder => "type a message", :class => "chat-main__message-form__box__text"}
-    -#   %label
-    -#     = icon('fas', 'image', class: "chat-main__message-form__box--image-btn")
-    -#     %input{:type => :file, :class => "hiddon"}
-    -# %input{:type => :submit, :value => "Send", :class => "chat-main__message-form--send-btn"}
+  = form_for [@group, @message] do |f|
+    .chat-main__message-form
+      .chat-main__message-form__box
+        = f.text_field :body, placeholder: 'type a message', class: "chat-main__message-form__box__text"
+        = f.label :image do
+          = icon('fas', 'image', class: "chat-main__message-form__box--image-btn")
+          %input{type: :file, class: :"hiddon"}
+      = f.submit 'Send', class: :"chat-main__message-form--send-btn"
