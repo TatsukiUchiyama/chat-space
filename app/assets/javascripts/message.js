@@ -47,13 +47,12 @@ $(function(){
       appendMessage(message);
       message_list.animate({ scrollTop: message_list[0].scrollHeight});
       $('.form_reset')[0].reset();
-      $('.chat-main__message-form--send-btn').prop('disabled', false);
     })
-
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+    })
+    .always(function() {
       $('.chat-main__message-form--send-btn').prop('disabled', false);
     });
   });
-
 });
