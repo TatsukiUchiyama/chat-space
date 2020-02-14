@@ -43,6 +43,7 @@ $textGray: #999999;
       height: calc( 100vh - 100px );
       background-color: #2f3e51;
       padding: 20px;
+      overflow-y: overlay;
       &__box{
         &__group-name{
           font-size: 15px;
@@ -106,6 +107,7 @@ $textGray: #999999;
       background-color: #fafafa;
       height: calc(100vh - 190px);
       padding: 35px 0 0 40px;
+      overflow: overlay;
       &__user-area{
         display: flex;
         &--name{
