@@ -108,23 +108,25 @@ $textGray: #999999;
       height: calc(100vh - 190px);
       padding: 35px 0 0 40px;
       overflow: overlay;
-      &__user-area{
-        display: flex;
-        &--name{
-          font-size: 16px;
-          color: #333333;
+      &__content{
+        &__user-area{
+          display: flex;
+          &--name{
+            font-size: 16px;
+            color: #333333;
+          }
+          &--date{
+            padding-left: 10px;
+            font-size: 12px;
+            color: $textGray;
+          }
         }
-        &--date{
-          padding-left: 10px;
-          font-size: 12px;
-          color: $textGray;
-        }
-      }
-      &__message-area{
-        padding: 12px 0 46px;
-        &--text{
-          font-size: 14px;
-          color: #434a54;
+        &__message-area{
+          padding: 12px 0 46px;
+          &--text{
+            font-size: 14px;
+            color: #434a54;
+          }
         }
       }
     }
