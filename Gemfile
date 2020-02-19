@@ -75,6 +75,8 @@ gem 'pry-rails'
 gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
 gem 'jquery-rails'
+gem 'fog-aws'
+
 
 group :test do
   gem 'faker', "~> 2.8"
